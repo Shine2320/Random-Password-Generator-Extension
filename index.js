@@ -23,4 +23,15 @@ function setPassword()
     firstPass.textContent=getStr()
     secondPass.textContent=getStr()
 }
-firstPass.addEventListener('click',console.log(firstPass.textContent))
+firstPass.addEventListener('click',firstPassCopy)
+function firstPassCopy()
+{
+    navigator.clipboard.writeText(firstPass.textContent);
+    alert("Copied the text: " + firstPass.textContent);
+}
+secondPass.addEventListener('click',secondPassCopy)
+function secondPassCopy()
+{
+    navigator.clipboard.writeText(secondPass.textContent);
+    alert("Copied the text: " + secondPass.textContent);
+}
